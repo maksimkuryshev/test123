@@ -8,19 +8,19 @@ public class CheckoutPage {
         PageFactory.initElements(driver, this);
         this.driver = driver; }
     @FindBy(xpath = "//*[contains(@name, 'firstName')]")
-    private WebElement firstFild;
+    private WebElement firstNameField;
     @FindBy(xpath = "//*[contains(@name, 'lastName')]")
-    private WebElement lastFild;
+    private WebElement lastNameField;
     @FindBy(xpath = "//*[contains(@name, 'postalCode')]")
-    private WebElement postalFild;
+    private WebElement postalCodeField;
     @FindBy(xpath = "//*[contains(@name, 'continue')]")
-    private WebElement continueBtn;
+    private WebElement continueButton;
 
-    public void firstNameInput(String login) {
-        firstFild.sendKeys(login); }
-    public void lastNameInput(String login) {
-        lastFild.sendKeys(login); }
-    public void postalCodeInput(String login) {
-        postalFild.sendKeys(login); }
+    public void inputFirstName(String login) {
+        firstNameField.sendKeys(login); }
+    public void inputLastName(String login) {
+        lastNameField.sendKeys(login); }
+    public void inputPostalCode(String login) {
+        postalCodeField.sendKeys(login); }
     public void clickContinueButton() {
-        continueBtn.click(); } }
+        continueButton.click(); } }

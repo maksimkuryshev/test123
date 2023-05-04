@@ -12,7 +12,7 @@ public class LoginPage {
     @FindBy(css = "input#user-name")
     private WebElement loginField;
     @FindBy(id = "login-button")
-    private WebElement loginBtn;
+    private WebElement loginButton;
     @FindBy(id = "password")
     private WebElement passwdField;
 
@@ -22,8 +22,8 @@ public class LoginPage {
     public void inputPasswd(String passwd) {
         passwdField.sendKeys(passwd); }
 
-    public void clickLoginBtn() {
-        loginBtn.click(); }
+    public void clickLoginButton() {
+        loginButton.click(); }
     public void assertText(String text) {
         assertTrue(driver.getPageSource().contains(text));
     }}

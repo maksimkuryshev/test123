@@ -30,13 +30,13 @@ public class WebTest {
     public void loginTest() {
         loginPage.inputLogin("standard_user");
         loginPage.inputPasswd("secret_sauce");
-        loginPage.clickLoginBtn();
+        loginPage.clickLoginButton();
         catalogPage.clickAddToCartButton();
         catalogPage.clickCartButton();
         cartPage.clickCheckoutButton();
-        checkoutPage.firstNameInput("test");
-        checkoutPage.lastNameInput("test");
-        checkoutPage.postalCodeInput("test");
+        checkoutPage.inputFirstName("test");
+        checkoutPage.inputLastName("test");
+        checkoutPage.inputPostalCode("test");
         checkoutPage.clickContinueButton();
         overviewPage.clickFinishButton();
         successPage.assertText("Thank you for your order!");
